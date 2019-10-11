@@ -1,0 +1,3 @@
+header=Por Crom
+title=Que los dioses te oigan
+body=Juega estar carta para aumentar en un +2 la próxima tirada de rasgo

@@ -1,0 +1,3 @@
+header=Furia Carmesi
+title=Y el barbaro se dejo llevar en un frenesi incontrolado
+body=Juega esta carta para entrar en furia carmesí
