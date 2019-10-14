@@ -229,10 +229,6 @@ func processImage(cfg cardConfig, imagePath string) {
 		output:   outputFilePath,
 		width:    float64(x - 10),
 	}
-	addText(cardPng, headerTextCfg)
-	outputFile := openFile(outputFilePath)
-	outputPng := decodeFileAsPng(outputFile)
-
 	titleTextCfg := textConfig{
 		font:     cfg.TitleFont,
 		label:    texts["title"],
@@ -243,10 +239,6 @@ func processImage(cfg cardConfig, imagePath string) {
 		output:   outputFilePath,
 		width:    float64(x - 10),
 	}
-	addText(outputPng, titleTextCfg)
-	outputFile = openFile(outputFilePath)
-	outputPng = decodeFileAsPng(outputFile)
-
 	bodyTextCfg := textConfig{
 		font:     cfg.BodyFont,
 		label:    texts["body"],
@@ -257,9 +249,16 @@ func processImage(cfg cardConfig, imagePath string) {
 		output:   outputFilePath,
 		width:    float64(x - 10),
 	}
-	addText(outputPng, bodyTextCfg)
-	outputFile = openFile(outputFilePath)
-	outputPng = decodeFileAsPng(outputFile)
+
+	textConfigs := []textConfig{
+		headerTextCfg, titleTextCfg, bodyTextCfg,
+	}
+
+	for _, cfg := range textConfigs {
+		outputFile := openFile(outputFilePath)
+		source := decodeFileAsPng(outputFile)
+		addText(source, cfg)
+	}
 }
 
 func processImages(cfg cardConfig) {
