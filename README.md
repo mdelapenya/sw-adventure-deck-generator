@@ -17,6 +17,8 @@ body=Juega estar carta para aumentar en un +2 la próxima tirada de rasgo
 ```
 4. All images must be PNG
 5. If the texts you use contain special characters (i.e. accents), consider using a font accepting them, otherwise they won't be displayed in the card.
+6. The dimensions of a card are: `243 x 340 px`, so this project uses templates with those dimensions.
+7. The images for each card must be `196 x 157 px`, so that they fit in the template.
 
 ## How to generate a deck
 1. Create the following file structure:
