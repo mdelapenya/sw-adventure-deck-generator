@@ -10,6 +10,7 @@ import (
 	"io"
 	"io/ioutil"
 	"log"
+	"math"
 	"os"
 	"os/user"
 	"path"
@@ -98,7 +99,7 @@ type textConfig struct {
 	output   string
 }
 
-func addText(source image.Image, cfg textConfig) {
+func addText(source image.Image, cfg textConfig) *gg.Context {
 	_, fontPath := getTrueTypeFont(cfg.font)
 
 	x := source.Bounds().Max.X
@@ -112,10 +113,18 @@ func addText(source image.Image, cfg textConfig) {
 		log.Fatalf("Cannot load font from %s: %v", fontPath, err)
 	}
 
+	textWidth, textHeight := dc.MeasureString(cfg.label)
+	linesCount := math.Floor(textWidth/cfg.width) + 1
+	if linesCount > 1 {
+		cfg.y += float64(textHeight * linesCount / 2)
+	}
+
 	dc.DrawImage(source, 0, 0)
 	dc.DrawStringWrapped(cfg.label, cfg.x, cfg.y, cfg.ax, cfg.ay, cfg.width, cfg.spacing, gg.AlignCenter)
 	dc.Clip()
 	dc.SavePNG(cfg.output)
+
+	return dc
 }
 
 func decodeFileAsPng(f *os.File) image.Image {
@@ -221,53 +230,62 @@ func processImage(cfg cardConfig, imagePath string) {
 	x := cardPng.Bounds().Max.X
 	y := cardPng.Bounds().Max.Y
 
-	defaultWidth := float64(x - 10)
+	defaultSpacing := 1.5
 
 	headerTextCfg := textConfig{
 		font:     cfg.HeaderFont,
 		label:    strings.ToUpper(texts["header"]),
 		fontSize: 14,
 		x:        float64(x / 2),
-		y:        float64(y/2) + 20,
 		ax:       0.5,
 		ay:       0.5,
-		spacing:  1.0,
+		spacing:  defaultSpacing,
 		output:   outputFilePath,
-		width:    defaultWidth,
+		width:    float64(x - 20),
 	}
 	titleTextCfg := textConfig{
 		font:     cfg.TitleFont,
 		label:    strings.ToUpper(texts["title"]),
 		fontSize: 12,
 		x:        float64(x / 2),
-		y:        float64(y/2) + 50,
 		ax:       0.5,
 		ay:       0.5,
-		spacing:  1.0,
+		spacing:  defaultSpacing,
 		output:   outputFilePath,
-		width:    defaultWidth,
+		width:    float64(x - 20),
 	}
 	bodyTextCfg := textConfig{
 		font:     cfg.BodyFont,
 		label:    texts["body"],
 		fontSize: 10,
 		x:        float64(x / 2),
-		y:        float64(y/2) + 80,
 		ax:       0.5,
 		ay:       0.5,
-		spacing:  1.5,
+		spacing:  defaultSpacing,
 		output:   outputFilePath,
-		width:    float64(x - 50),
+		width:    float64(x - 40),
 	}
 
 	textConfigs := []textConfig{
 		headerTextCfg, titleTextCfg, bodyTextCfg,
 	}
 
+	initialY := float64(y/2) + 20
+
 	for _, cfg := range textConfigs {
 		outputFile := openFile(outputFilePath)
 		source := decodeFileAsPng(outputFile)
-		addText(source, cfg)
+
+		cfg.y = initialY
+
+		dc := addText(source, cfg)
+
+		textWidth, _ := dc.MeasureString(cfg.label)
+
+		linesCount := math.Floor(textWidth/cfg.width) + 1
+
+		delta := (linesCount * 12.5) + 20
+		initialY += delta
 	}
 }
 
