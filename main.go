@@ -255,9 +255,9 @@ func processImage(cfg cardConfig, imagePath string) {
 		y:        float64(y/2) + 80,
 		ax:       0.5,
 		ay:       0.5,
-		spacing:  1.0,
+		spacing:  1.5,
 		output:   outputFilePath,
-		width:    defaultWidth,
+		width:    float64(x - 50),
 	}
 
 	textConfigs := []textConfig{
