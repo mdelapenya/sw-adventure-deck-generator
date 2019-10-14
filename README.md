@@ -51,3 +51,23 @@ body=Juega estar carta para aumentar en un +2 la próxima tirada de rasgo
     - the font to use for the Header of the card
     - the font to use for the Title and the Body of the card (both will share font)
 4. The generation will proceed and the outputs dir will be populated with your card!
+
+## Examples
+
+There is a very simple example in this repository, at the [examples](./examples) directory.
+
+#### Template Example
+![template.png](./examples/templates/fantasy.png)
+
+#### Image Example
+![001.png](./examples/images/001.png)
+
+#### Text Example
+```properties
+header=Por Crom
+title=Que los dioses te oigan
+body=Juega estar carta para aumentar en un +2 la próxima tirada de rasgo
+```
+
+#### Card Example
+![card_001.png](./examples/outputs/card_001.png)
