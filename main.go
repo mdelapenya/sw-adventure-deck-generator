@@ -85,8 +85,19 @@ func main() {
 	validateImages(outputsPath, cardsDims)
 }
 
-func addText(source image.Image, f string, text string, fontSize float64, offset float64, output string) {
-	_, fontPath := getTrueTypeFont(f)
+type textConfig struct {
+	label    string
+	font     string
+	fontSize float64
+	spacing  float64
+	x        float64
+	y        float64
+	width    float64
+	output   string
+}
+
+func addText(source image.Image, cfg textConfig) {
+	_, fontPath := getTrueTypeFont(cfg.font)
 
 	x := source.Bounds().Max.X
 	y := source.Bounds().Max.Y
@@ -95,16 +106,16 @@ func addText(source image.Image, f string, text string, fontSize float64, offset
 	dc.AsMask()
 	dc.Clear()
 	dc.SetRGB(0, 0, 0)
-	if err := dc.LoadFontFace(fontPath, fontSize); err != nil {
+	if err := dc.LoadFontFace(fontPath, cfg.fontSize); err != nil {
 		log.Fatalf("Cannot load font from %s: %v", fontPath, err)
 	}
 
-	dc.DrawStringAnchored(text, 21, 188, 0.5, 0.5)
+	dc.DrawStringAnchored(cfg.label, 21, 188, 0.5, 0.5)
 	dc.DrawRoundedRectangle(0, 0, float64(x), float64(y), 0)
 	dc.DrawImage(source, 0, 0)
-	dc.DrawStringWrapped(text, float64(x/2), float64(y/2)+offset, 0.5, 0.5, float64(x-10), 1.0, gg.AlignCenter)
+	dc.DrawStringWrapped(cfg.label, cfg.x, cfg.y, 0.5, 0.5, cfg.width, cfg.spacing, gg.AlignCenter)
 	dc.Clip()
-	dc.SavePNG(output)
+	dc.SavePNG(cfg.output)
 }
 
 func decodeFileAsPng(f *os.File) image.Image {
@@ -207,15 +218,48 @@ func processImage(cfg cardConfig, imagePath string) {
 	textFilePath := path.Join(cfg.TextsPath, imageName+".txt")
 	texts := readTextFile(textFilePath)
 
-	addText(cardPng, cfg.HeaderFont, texts["header"], 14, 20, outputFilePath)
+	x := cardPng.Bounds().Max.X
+	y := cardPng.Bounds().Max.Y
+
+	headerTextCfg := textConfig{
+		font:     cfg.HeaderFont,
+		label:    texts["header"],
+		fontSize: 14,
+		x:        float64(x / 2),
+		y:        float64(y/2) + 20,
+		spacing:  1.0,
+		output:   outputFilePath,
+		width:    float64(x - 10),
+	}
+	addText(cardPng, headerTextCfg)
 	outputFile := openFile(outputFilePath)
 	outputPng := decodeFileAsPng(outputFile)
 
-	addText(outputPng, cfg.TitleFont, texts["title"], 12, 50, outputFilePath)
+	titleTextCfg := textConfig{
+		font:     cfg.TitleFont,
+		label:    texts["title"],
+		fontSize: 12,
+		x:        float64(x / 2),
+		y:        float64(y/2) + 50,
+		spacing:  1.0,
+		output:   outputFilePath,
+		width:    float64(x - 10),
+	}
+	addText(outputPng, titleTextCfg)
 	outputFile = openFile(outputFilePath)
 	outputPng = decodeFileAsPng(outputFile)
 
-	addText(outputPng, cfg.BodyFont, texts["body"], 10, 80, outputFilePath)
+	bodyTextCfg := textConfig{
+		font:     cfg.BodyFont,
+		label:    texts["body"],
+		fontSize: 10,
+		x:        float64(x / 2),
+		y:        float64(y/2) + 80,
+		spacing:  1.0,
+		output:   outputFilePath,
+		width:    float64(x - 10),
+	}
+	addText(outputPng, bodyTextCfg)
 	outputFile = openFile(outputFilePath)
 	outputPng = decodeFileAsPng(outputFile)
 }
