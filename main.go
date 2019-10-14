@@ -219,6 +219,8 @@ func processImage(cfg cardConfig, imagePath string) {
 	x := cardPng.Bounds().Max.X
 	y := cardPng.Bounds().Max.Y
 
+	defaultWidth := float64(x - 10)
+
 	headerTextCfg := textConfig{
 		font:     cfg.HeaderFont,
 		label:    texts["header"],
@@ -227,7 +229,7 @@ func processImage(cfg cardConfig, imagePath string) {
 		y:        float64(y/2) + 20,
 		spacing:  1.0,
 		output:   outputFilePath,
-		width:    float64(x - 10),
+		width:    defaultWidth,
 	}
 	titleTextCfg := textConfig{
 		font:     cfg.TitleFont,
@@ -237,7 +239,7 @@ func processImage(cfg cardConfig, imagePath string) {
 		y:        float64(y/2) + 50,
 		spacing:  1.0,
 		output:   outputFilePath,
-		width:    float64(x - 10),
+		width:    defaultWidth,
 	}
 	bodyTextCfg := textConfig{
 		font:     cfg.BodyFont,
@@ -247,7 +249,7 @@ func processImage(cfg cardConfig, imagePath string) {
 		y:        float64(y/2) + 80,
 		spacing:  1.0,
 		output:   outputFilePath,
-		width:    float64(x - 10),
+		width:    defaultWidth,
 	}
 
 	textConfigs := []textConfig{
