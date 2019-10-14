@@ -1,0 +1,3 @@
+header=ENEMIGO
+title=VOLVEMOS A ENCONTRARNOS
+body=Juega esta carta al comienzo de la sesión de juego. Uno de los villanos, a elección del DJ, se convierte en tu enemigo jurado. No puedes absorber heridas que cause directametne. Recibes una carta adicional de aventura hasta que acabes con él

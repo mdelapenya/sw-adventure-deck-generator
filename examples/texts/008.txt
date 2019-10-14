@@ -1,0 +1,3 @@
+header=VESTIDO PARA MATAR
+title=¡ESO ES UN CUERPO...!
+body=Tu héroe se acicala para la noche que está por llegar, o de algún otro modo se muestra mucho más atractivo/a de lo esperado. Añade +4 a tu Carisma durante lo que queda de escena

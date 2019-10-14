@@ -1,0 +1,3 @@
+header=GOLPE MORTAL
+title=¡UFFF, ESO TIENE QUE DOLER!
+body=Juega esta carga después de calcular el daño causado por un ataque cuerpo a cuerpo existoso, para doblar su total

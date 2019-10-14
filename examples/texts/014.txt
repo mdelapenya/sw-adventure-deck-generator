@@ -1,0 +1,3 @@
+header=dame una pista
+title=¡Espera, tengo una idea!
+body=Juega esta carta para que el DJ te proporcione una pista o consejo sobre cómo solventar un problema o situación en la que estés metido

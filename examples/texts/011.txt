@@ -1,0 +1,3 @@
+header=esfuerzo adicional
+title=impresionante, muy impresionante
+body=Juega esta carta para añadir +1d6 al resultado de una tirada de rasgo. Este dado extra puede explotar

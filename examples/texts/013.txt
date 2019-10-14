@@ -1,0 +1,3 @@
+header=heroe del pueblo
+title=roba a los ricos para dárselo a los pobres
+body=Juega esta carta después de ayudar a un grupo de gente con problemas serios. La comunidad te adopta a ti y a tus compañeros como héroes locales. Siempre que lo necesitéis podréis encontrar ayuda en este lugar

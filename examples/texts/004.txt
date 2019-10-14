@@ -1,0 +1,3 @@
+header=MEJOR TU QUE YO
+title=¡HAN MATADO A KENNY!
+body=Juega esta carta cuando tu héroe sufra un ataque con éxito y haya otro personaje junit a él. Es esto otro el que sufre el ataque en su lugar. Puede jugarse sobre aliados o enemigos

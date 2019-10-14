@@ -1,0 +1,3 @@
+header=¡DIANA!
+title=INCLUSO LAS CORAZAS TIENEN VISOR
+body=Juega esta carta después de calcular el daño causado por un ataque existoso a distancia, para doblar su total

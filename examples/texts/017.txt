@@ -1,0 +1,3 @@
+header=inspiracion
+title=Sólo tenemos una oportunidad, es todo o nada
+body=Tus aliados (y eso incluye a tu héroe) añaden +2 a todas sus tiradas de rasgo durante el resto de la ronda
