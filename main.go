@@ -211,11 +211,11 @@ func processImage(cfg cardConfig, imagePath string) {
 	outputFile := openFile(outputFilePath)
 	outputPng := decodeFileAsPng(outputFile)
 
-	addText(outputPng, cfg.TitleFont, texts["title"], 12, 60, outputFilePath)
+	addText(outputPng, cfg.TitleFont, texts["title"], 12, 50, outputFilePath)
 	outputFile = openFile(outputFilePath)
 	outputPng = decodeFileAsPng(outputFile)
 
-	addText(outputPng, cfg.BodyFont, texts["body"], 10, 100, outputFilePath)
+	addText(outputPng, cfg.BodyFont, texts["body"], 10, 80, outputFilePath)
 	outputFile = openFile(outputFilePath)
 	outputPng = decodeFileAsPng(outputFile)
 }
