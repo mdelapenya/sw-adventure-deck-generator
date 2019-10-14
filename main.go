@@ -225,7 +225,7 @@ func processImage(cfg cardConfig, imagePath string) {
 
 	headerTextCfg := textConfig{
 		font:     cfg.HeaderFont,
-		label:    texts["header"],
+		label:    strings.ToUpper(texts["header"]),
 		fontSize: 14,
 		x:        float64(x / 2),
 		y:        float64(y/2) + 20,
@@ -237,7 +237,7 @@ func processImage(cfg cardConfig, imagePath string) {
 	}
 	titleTextCfg := textConfig{
 		font:     cfg.TitleFont,
-		label:    texts["title"],
+		label:    strings.ToUpper(texts["title"]),
 		fontSize: 12,
 		x:        float64(x / 2),
 		y:        float64(y/2) + 50,
