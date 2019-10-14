@@ -110,8 +110,6 @@ func addText(source image.Image, cfg textConfig) {
 		log.Fatalf("Cannot load font from %s: %v", fontPath, err)
 	}
 
-	dc.DrawStringAnchored(cfg.label, 21, 188, 0.5, 0.5)
-	dc.DrawRoundedRectangle(0, 0, float64(x), float64(y), 0)
 	dc.DrawImage(source, 0, 0)
 	dc.DrawStringWrapped(cfg.label, cfg.x, cfg.y, 0.5, 0.5, cfg.width, cfg.spacing, gg.AlignCenter)
 	dc.Clip()
