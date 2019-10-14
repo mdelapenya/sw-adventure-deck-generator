@@ -16,6 +16,7 @@ title=Que los dioses te oigan
 body=Juega estar carta para aumentar en un +2 la próxima tirada de rasgo
 ```
 4. All images must be PNG
+5. If the texts you use contain special characters (i.e. accents), consider using a font accepting them, otherwise they won't be displayed in the card.
 
 ## How to generate a deck
 1. Create the following file structure:
