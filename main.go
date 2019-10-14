@@ -397,7 +397,7 @@ func readTextFile(filename string) cardText {
 
 	file, err := os.Open(filename)
 	if err != nil {
-		log.Fatal("Cannot open text file: %v", err)
+		log.Fatalf("Cannot open text file: %v", err)
 	}
 	defer file.Close()
 
@@ -422,7 +422,7 @@ func readTextFile(filename string) cardText {
 			break
 		}
 		if err != nil {
-			log.Fatal("Cannot read text file: %v", err)
+			log.Fatalf("Cannot read text file: %v", err)
 		}
 	}
 	return card
