@@ -92,6 +92,8 @@ type textConfig struct {
 	spacing  float64
 	x        float64
 	y        float64
+	ax       float64
+	ay       float64
 	width    float64
 	output   string
 }
@@ -111,7 +113,7 @@ func addText(source image.Image, cfg textConfig) {
 	}
 
 	dc.DrawImage(source, 0, 0)
-	dc.DrawStringWrapped(cfg.label, cfg.x, cfg.y, 0.5, 0.5, cfg.width, cfg.spacing, gg.AlignCenter)
+	dc.DrawStringWrapped(cfg.label, cfg.x, cfg.y, cfg.ax, cfg.ay, cfg.width, cfg.spacing, gg.AlignCenter)
 	dc.Clip()
 	dc.SavePNG(cfg.output)
 }
@@ -227,6 +229,8 @@ func processImage(cfg cardConfig, imagePath string) {
 		fontSize: 14,
 		x:        float64(x / 2),
 		y:        float64(y/2) + 20,
+		ax:       0.5,
+		ay:       0.5,
 		spacing:  1.0,
 		output:   outputFilePath,
 		width:    defaultWidth,
@@ -237,6 +241,8 @@ func processImage(cfg cardConfig, imagePath string) {
 		fontSize: 12,
 		x:        float64(x / 2),
 		y:        float64(y/2) + 50,
+		ax:       0.5,
+		ay:       0.5,
 		spacing:  1.0,
 		output:   outputFilePath,
 		width:    defaultWidth,
@@ -247,6 +253,8 @@ func processImage(cfg cardConfig, imagePath string) {
 		fontSize: 10,
 		x:        float64(x / 2),
 		y:        float64(y/2) + 80,
+		ax:       0.5,
+		ay:       0.5,
 		spacing:  1.0,
 		output:   outputFilePath,
 		width:    defaultWidth,
