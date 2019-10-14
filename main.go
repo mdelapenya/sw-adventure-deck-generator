@@ -68,12 +68,12 @@ func main() {
 	textsPath := promptPath("texts directory", path.Join(basePath, defaultTextsPath))
 	outputsPath := promptPath("output directory", path.Join(basePath, defaultOutputsPath))
 
-	hf := promptTrueTypeFonts("Header and Title")
-	bf := promptTrueTypeFonts("Body")
+	hf := promptTrueTypeFonts("Header")
+	bf := promptTrueTypeFonts("Title and Body")
 
 	cardCfg := cardConfig{
 		HeaderFont:  hf,
-		TitleFont:   hf,
+		TitleFont:   bf,
 		BodyFont:    bf,
 		Template:    path.Join(templatesPath, template),
 		OutputsPath: outputsPath,

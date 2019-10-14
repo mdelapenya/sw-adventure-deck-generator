@@ -48,6 +48,6 @@ body=Juega estar carta para aumentar en un +2 la próxima tirada de rasgo
     - the location of the images directory
     - the location of the templates directory. You will be prompted to choose one template
     - the location of the texts directory
-    - the font to use for Header and Title of the card (both will share font)
-    - the font to use for the Body of the card (both will share font)
+    - the font to use for the Header of the card
+    - the font to use for the Title and the Body of the card (both will share font)
 4. The generation will proceed and the outputs dir will be populated with your card!
