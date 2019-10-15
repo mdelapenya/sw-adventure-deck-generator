@@ -1,0 +1,3 @@
+header=INSPIRACION ARCANA
+title=NO TENGO NI IDEA DE CÓMO LO HE HECHO
+body=Recupera inmediatamente todos los puntos de poder gastados

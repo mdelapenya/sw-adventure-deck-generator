@@ -1,0 +1,3 @@
+header=epifania
+title=es la suerte del principiante
+body=Algo que jamás se te dio bien, de repente "encaja". Ganas d6 en una habilidad que no tengas aprendida a tu elección, hasta el final de la sesión

@@ -1,0 +1,3 @@
+header=CONTACTO
+title=REGGIE, VIEJO SINVERGÜENZA, ¿CÓMO ESTÁS?
+body=Tu héroe se topa con un viejo amigo o un conocido, que podría ayudarle de algún modo a conseguir algo que necesita. Por supuesto, éste podría pedirle algún favor a cambio de su ayuda

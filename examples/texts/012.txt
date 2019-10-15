@@ -1,0 +1,3 @@
+header=rasguno
+title=levanta cobarde, no engañas a nadie
+body=Juega esta carta para hacer que Extra herido se recupere inmediatamente, quedando ileso y sin estar aturdido. El extra debe haber sido herido en la escena actual

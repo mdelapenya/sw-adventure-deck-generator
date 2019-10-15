@@ -1,0 +1,3 @@
+header=alijo oculto
+title=¿necesitas un catalejo? llevo encima de todo
+body=Tu héroe saca de algún sitio inesperado, o gorronea, un objeto genérico a elección del DJ, como agua, comida, cobijo, flechas, dinero para alquilar una habitación, etc.

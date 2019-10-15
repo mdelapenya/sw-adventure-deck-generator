@@ -1,0 +1,3 @@
+header=ultima linea de defensa
+title=¡todos juntos, ahora!
+body=Hasta que se reparta un comodín, tanto tu héroe como todos tus aliados adyacentes ganan +2 a Parada y a Dureza. Los aliados que se desplacen hasta quedar en contacto contigo tras haber jugado la carta también lo ganan

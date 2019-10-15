@@ -1,3 +1,3 @@
-header=Furia Carmesi
-title=Y el bárbaro se dejó llevar en un frenesí incontrolado
-body=Juega esta carta para entrar en furia carmesí
+header=SUBIDON DE ADRENALINA
+title=PERO... ¿CÓMO LO HAS HECHO?
+body=Tu héroe gana inmediatamente un nuevo turno adicional (incluyendo movimiento)

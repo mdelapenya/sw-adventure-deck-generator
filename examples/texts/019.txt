@@ -1,0 +1,3 @@
+header=acabemos esto de una vez
+title=¿Vas a quedarte ahí desangrándote o prefieres luchar?
+body=Juega esta carta al comienzo de una ronda de combate donde no se haya repartido un comodín. Ningún personaje podrá absorber heridas hasta que se reparta un comodín
