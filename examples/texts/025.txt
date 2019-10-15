@@ -1,0 +1,3 @@
+header=venganza
+title=Tú mataste a mi padre, ¡prepárate a morir!
+body=Juega esta carta sobre un personaje Comodín adversario. Ganas +2 a todos los ataques que realices contra él por el resto de la escena

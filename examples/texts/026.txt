@@ -1,0 +1,3 @@
+header=paz
+title=Espera, yo conozco a esta persona...
+body=Tu héroe es capaz de mejorar la actitud de un grupo de PNJ durante un encuentro, quizás al reconocer a uno de ellos, mostrando el debido respeto u ofreciendo un soborno. No funciona con verdaderos enemidos, sólo "neutrales" que se crucen en tu camino

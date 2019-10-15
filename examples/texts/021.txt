@@ -1,0 +1,3 @@
+header=golpe de suerte
+title=Menos mal que llevaba esta medalla en la camisa
+body=Juega esta carta para negar por completo el daño de un ataque

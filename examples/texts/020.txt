@@ -1,0 +1,3 @@
+header=interes romantico
+title=¿Vienes a menudo?
+body=Juega esta carta sobre un PNJ para iniciar un interés romántico hacia tu personaje. El blanco te ayudará lo mejor que pueda dentro de sus posibilidades, aunque su ayuda pueda también convertirse en una fuente de problemas

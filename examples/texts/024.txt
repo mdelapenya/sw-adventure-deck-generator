@@ -1,0 +1,3 @@
+header=no sera hoy
+title=Fallaste, ahora me toca a mí
+body=Juega esta carta después de que otro personaje distinto a ti realice una tirada de ataque. No sólo esa tirada falla de forma automática, sino que es equivalente a obtener una pifia

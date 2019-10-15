@@ -1,0 +1,3 @@
+header=refuerzos
+title=¡Están por todos lados, es el fin!
+body=Juega esta carta durante un combate. Tus adversarios reciben refuerzos. La cantidad y el tipo exacto queda en manos del DJ. Todos los jugadores podéis robar una carta del mazo de aventuras

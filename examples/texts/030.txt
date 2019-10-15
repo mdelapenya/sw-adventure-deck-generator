@@ -1,0 +1,3 @@
+header=renombre
+title=¿Sois vosotros los que derrotasteis al monstruo?
+body=Juega esta carta después de completar una heroicidad de importancia. Ganas una bonificación permanente de +1 a tu Carisma con quien haya oído hablar de ella (normalmente, un 50% de probabilidad)

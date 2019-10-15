@@ -1,0 +1,3 @@
+header=funcionamiento defectuoso
+title=¡Pero qué torpe!
+body=Un objeto funciona mal, se rompe una cuerda del arco, una espada no sale del cinturón, etc. Es posible reparar el objeto invirtiendo 10 minutos de trabajo y una tirada de Reparar a -4

@@ -1,0 +1,3 @@
+header=oleada de poder
+title=¿De dónde ha salido eso?
+body=El personaje recupera inmediatamente 2d6 puntos de poder. Se puede superar el límite de PP, pero cualquier exceso se pierde al final de la escena actual

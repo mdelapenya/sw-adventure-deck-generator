@@ -1,0 +1,3 @@
+header=grito de guerra
+title=¡Libertad!
+body=En cuanto juegues esta carta, todos tus aliados capaces de verte u oírte se recuperan automáticamente del aturdimiento

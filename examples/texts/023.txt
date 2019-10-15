@@ -1,0 +1,3 @@
+header=noble sacrificio
+title=¡Cuidado, hazte a un lado!
+body=Juega esta carta cuando un aliado adyacente sufra un daño. Eres tú quien lo recibe en su lugar
